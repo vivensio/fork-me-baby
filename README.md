@@ -1,7 +1,9 @@
 # fork-me-baby
-
-Demo can be found [here](http://www.vivensio.github.io/fork-me-baby)
 ![Screenshot](banner.png?raw=true)
+
+
+Demo can be found [here](https://vivensio.github.io/fork-me-baby/)
+
 
 
 ## Why
@@ -21,7 +23,9 @@ forkMeBaby({
 
 ### Properties : 
 
-` position ` : Where should the fork-me-baby button be? Possible values are ` top-left `, ` top-right `, ` bottom-right ` and ` bottom-left `
+` position ` : Where should the fork-me-baby button be? Possible values: ` top-left `, ` top-right `, ` bottom-right ` and ` bottom-left `
+
+
 ` link ` :  Project's GitHub Link.
 
 
@@ -29,5 +33,7 @@ forkMeBaby({
 
 
 Icon Credits : 
+
 [Fork](https://thenounproject.com/npbluth/icon/378497) by Nick Bluth from the Noun Project.
+
 [Left up curve arrow](https://thenounproject.com/term/left-up-curve-arrow/218091) by Universal Icons from the Noun Project.
