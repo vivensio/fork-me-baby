@@ -1,0 +1,82 @@
+$triangle-color: #333;
+$triangle-hover-color: #4078C0;
+$triangle-active-color: #6495ed;
+$transparent: transparent transparent transparent transparent;
+$positions: top right bottom left;
+
+@mixin make-triangle($params, $dir) {
+    &:before {
+        border-top-width: nth($params, 1) * 1px;
+        border-right-width: nth($params, 2) * 1px;
+        border-bottom-width: nth($params, 3) * 1px;
+        border-left-width: nth($params, 4) * 1px;
+        border-color: $transparent;
+        border-#{$dir}-color: $triangle-color;
+    }
+    &:hover:before {
+        border-color: $transparent;
+        border-#{$dir}-color: $triangle-hover-color;
+    }
+    &:active:before {
+        border-color: $transparent;
+        border-#{$dir}-color: $triangle-active-color;
+    }
+}
+
+@mixin zero-this($params) {
+    @for $i from 1 through length($params) {
+        $j: nth($params, $i);
+        #{$j}: 0;
+        &:before {
+            #{$j}: 0;
+        }
+    }
+}
+
+.fork-me-baby {
+    position: fixed;
+    &:before {
+        content: '';
+        border-style: solid;
+        position: absolute;
+        pointer-events: none;
+        transition: all 250ms ease-in-out;
+    }
+    a {
+        position: absolute;
+        top: 15px;
+        height: 32px;
+    }
+    &.top-left {
+        @include make-triangle(0 0 100 125, left);
+        @include zero-this(top left);
+        a {
+            left: 20px;
+        }
+    }
+    &.top-right {
+        @include make-triangle(0 125 100 0, right);
+        @include zero-this(top right);
+        a {
+            right: 20px;
+        }
+    }
+    &.bottom-right {
+        @include make-triangle(0 0 100 125, bottom);
+        @include zero-this(bottom right);
+        a {
+            top: -45px;
+		    right: 20px;
+        }
+    }
+    &.bottom-left {
+        @include make-triangle(0 125 100 0, bottom);
+        @include zero-this(bottom left);
+        a {
+            top: -45px;
+		    left: 20px;
+        }
+    }
+}
+
+
