@@ -6,6 +6,8 @@
     position: absolute;
     pointer-events: none;
     transition: all 250ms ease-in-out; }
+  .fork-me-baby .github-octicon-mark {
+    fill: #ffffff; }
   .fork-me-baby a {
     position: absolute;
     top: 15px;
@@ -19,7 +21,7 @@
       border-bottom-width: 100px;
       border-left-width: 125px;
       border-color: transparent transparent transparent transparent;
-      border-left-color: #333; }
+      border-left-color: #333333; }
     .fork-me-baby.top-left:hover:before {
       border-color: transparent transparent transparent transparent;
       border-left-color: #4078C0; }
@@ -41,7 +43,7 @@
       border-bottom-width: 100px;
       border-left-width: 0px;
       border-color: transparent transparent transparent transparent;
-      border-right-color: #333; }
+      border-right-color: #333333; }
     .fork-me-baby.top-right:hover:before {
       border-color: transparent transparent transparent transparent;
       border-right-color: #4078C0; }
@@ -63,7 +65,7 @@
       border-bottom-width: 100px;
       border-left-width: 125px;
       border-color: transparent transparent transparent transparent;
-      border-bottom-color: #333; }
+      border-bottom-color: #333333; }
     .fork-me-baby.bottom-right:hover:before {
       border-color: transparent transparent transparent transparent;
       border-bottom-color: #4078C0; }
@@ -86,7 +88,7 @@
       border-bottom-width: 100px;
       border-left-width: 0px;
       border-color: transparent transparent transparent transparent;
-      border-bottom-color: #333; }
+      border-bottom-color: #333333; }
     .fork-me-baby.bottom-left:hover:before {
       border-color: transparent transparent transparent transparent;
       border-bottom-color: #4078C0; }

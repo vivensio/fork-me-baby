@@ -1,6 +1,5 @@
-$triangle-color: #333;
-$triangle-hover-color: #4078C0;
-$triangle-active-color: #6495ed;
+@import 'colors';
+
 $transparent: transparent transparent transparent transparent;
 $positions: top right bottom left;
 
@@ -41,6 +40,9 @@ $positions: top right bottom left;
         position: absolute;
         pointer-events: none;
         transition: all 250ms ease-in-out;
+    }
+    .github-octicon-mark {
+        fill: $octicon-fill-color;
     }
     a {
         position: absolute;
