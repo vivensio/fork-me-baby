@@ -17,21 +17,27 @@ Include fork-me-baby.min.js (in [dist](https://github.com/vivensio/fork-me-baby/
 ```js
 forkMeBaby({
     position : 'top-right',
-    link: 'https://www.github.com/abc/xyz'
+    link: 'https://www.github.com/abc/xyz',
+    sticky: true
 });
 ```
 
 ### Properties : 
 
-` position ` : Position of the button. Possible values: ` top-left `, ` top-right `, ` bottom-right ` and ` bottom-left `
 
-
-` link ` :  Project's GitHub Link.
+| Property              | Type        | Default        | Description |
+| ---                   | ---         | ---            | ---         |
+| `position`            | String      | 'top-right'    | Other possible positions : ` top-left `, ` bottom-right ` and ` bottom-left ` 
+| `link`                | String      | ''             | GitHub URL of the project
+| `sticky`              | Boolean     | ` false `       | Set ` sticky ` to ` true ` to make it stick to one corner
 
 
 
 
 <br/><br/><br/>
+___
+
+
 ### Credits : 
 
 [Fork](https://thenounproject.com/npbluth/icon/378497) by Nick Bluth from the Noun Project.  

@@ -33,7 +33,7 @@ $positions: top right bottom left;
 }
 
 .fork-me-baby {
-    position: fixed;
+    position: absolute;
     &:before {
         content: '';
         border-style: solid;
@@ -48,6 +48,9 @@ $positions: top right bottom left;
         position: absolute;
         top: 15px;
         height: 32px;
+    }
+    &--sticky {
+        position: fixed;
     }
     &.top-left {
         @include make-triangle(0 0 100 125, left);

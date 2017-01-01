@@ -1,5 +1,5 @@
 .fork-me-baby {
-  position: fixed; }
+  position: absolute; }
   .fork-me-baby:before {
     content: '';
     border-style: solid;
@@ -12,6 +12,8 @@
     position: absolute;
     top: 15px;
     height: 32px; }
+  .fork-me-baby--sticky {
+    position: fixed; }
   .fork-me-baby.top-left {
     top: 0;
     left: 0; }
