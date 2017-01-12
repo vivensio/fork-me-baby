@@ -14,10 +14,20 @@
 
         forkMeBaby.classList.add(pos);
         forkMeBaby.querySelector('a').setAttribute('href', link);
-        if (sticky) forkMeBaby.classList.add('fork-me-baby--sticky');
-        
+        if (sticky) 
+            forkMeBaby.classList.add('fork-me-baby--sticky');
+
+        if (pos.indexOf('bottom') > -1)
+            handleBottom(sticky);
         appendStyles();
     };
+    var handleBottom = function (sticky) {
+        if (sticky) return;
+        else {
+            var scrollHeight = document.documentElement.scrollHeight;
+            document.querySelector('.fork-me-baby').style.top = scrollHeight + 'px';
+        }
+    }
     var appendStyles = function () {
         var style = document.createElement('style');
         style.innerHTML = 'SRC_STYLE';

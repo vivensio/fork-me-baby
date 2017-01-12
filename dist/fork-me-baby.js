@@ -14,10 +14,20 @@
 
         forkMeBaby.classList.add(pos);
         forkMeBaby.querySelector('a').setAttribute('href', link);
-        if (sticky) forkMeBaby.classList.add('fork-me-baby--sticky');
-        
+        if (sticky) 
+            forkMeBaby.classList.add('fork-me-baby--sticky');
+
+        if (pos.indexOf('bottom') > -1)
+            handleBottom(sticky);
         appendStyles();
     };
+    var handleBottom = function (sticky) {
+        if (sticky) return;
+        else {
+            var scrollHeight = document.documentElement.scrollHeight;
+            document.querySelector('.fork-me-baby').style.top = scrollHeight + 'px';
+        }
+    }
     var appendStyles = function () {
         var style = document.createElement('style');
         style.innerHTML = '.fork-me-baby{position:absolute}.fork-me-baby:before{content:"";border-style:solid;position:absolute;pointer-events:none;transition:all .25s ease-in-out}.fork-me-baby .github-octicon-mark{fill:#fff}.fork-me-baby a{position:absolute;top:15px;height:32px}.fork-me-baby--sticky{position:fixed}.fork-me-baby.top-left{top:0;left:0}.fork-me-baby.top-left:before{border-top-width:0;border-right-width:0;border-bottom-width:100px;border-left-width:125px;border-color:transparent;border-left-color:#333}.fork-me-baby.top-left:hover:before{border-color:transparent;border-left-color:#4078c0}.fork-me-baby.top-left:active:before{border-color:transparent;border-left-color:#6495ed}.fork-me-baby.top-left:before{top:0;left:0}.fork-me-baby.top-left a{left:20px}.fork-me-baby.top-right{top:0;right:0}.fork-me-baby.top-right:before{border-top-width:0;border-right-width:125px;border-bottom-width:100px;border-left-width:0;border-color:transparent;border-right-color:#333}.fork-me-baby.top-right:hover:before{border-color:transparent;border-right-color:#4078c0}.fork-me-baby.top-right:active:before{border-color:transparent;border-right-color:#6495ed}.fork-me-baby.top-right:before{top:0;right:0}.fork-me-baby.top-right a{right:20px}.fork-me-baby.bottom-right{bottom:0;right:0}.fork-me-baby.bottom-right:before{border-top-width:0;border-right-width:0;border-bottom-width:100px;border-left-width:125px;border-color:transparent;border-bottom-color:#333}.fork-me-baby.bottom-right:hover:before{border-color:transparent;border-bottom-color:#4078c0}.fork-me-baby.bottom-right:active:before{border-color:transparent;border-bottom-color:#6495ed}.fork-me-baby.bottom-right:before{bottom:0;right:0}.fork-me-baby.bottom-right a{top:-45px;right:20px}.fork-me-baby.bottom-left{bottom:0;left:0}.fork-me-baby.bottom-left:before{border-top-width:0;border-right-width:125px;border-bottom-width:100px;border-left-width:0;border-color:transparent;border-bottom-color:#333}.fork-me-baby.bottom-left:hover:before{border-color:transparent;border-bottom-color:#4078c0}.fork-me-baby.bottom-left:active:before{border-color:transparent;border-bottom-color:#6495ed}.fork-me-baby.bottom-left:before{bottom:0;left:0}.fork-me-baby.bottom-left a{top:-45px;left:20px}';

@@ -1,8 +1,7 @@
 {
   "name": "fork-me-baby",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A fancy github fork me button for side projects",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
