@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>A fancy fork me button for side projects -- fork-me-baby</title>
-    <script src="dist/fork-me-baby.min.js"></script>
+    <link rel="stylesheet" href="./site/style.css" />
+    <script src="./dist/fork-me-baby.min.js"></script>
 </head>
 <body>
     <section class="demo">
@@ -12,64 +13,12 @@
         <p>Put your fancy github fork button wherever you want</p>
         <div>
             <input type="button" class="btn-change-position" value="top-left"/>
-            <input type="button" class="btn-change-position" value="top-right"/>
+            <input type="button" class="btn-change-position selected" value="top-right"/>
             <input type="button" class="btn-change-position" value="bottom-right"/>
             <input type="button" class="btn-change-position" value="bottom-left"/>
         </div>
+        <input type="checkbox" id="check-sticky"/><label for="check-sticky"> sticky</label>
     </section>
 </body>
-<script>
-    forkMeBaby({
-        position : 'top-right',
-        link: 'https://www.vivensio.github.io/fork-me-baby',
-        sticky: true
-    });
-
-    // by Todd Motto
-    var forEach = function (array, callback, scope) {
-        for (var i = 0; i < array.length; i++) {
-            callback.call(scope, i, array[i]); // passes back stuff we need
-        }
-    };
-
-    var btns = document.querySelectorAll('.btn-change-position');
-    forEach(btns, function (index, btn) {
-        btn.addEventListener('click', function () {
-            document.querySelector('.fork-me-baby').className = 'fork-me-baby ' + btn.value;
-        });
-    });
-
-</script>
-<style>
-	* {
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-	}
-    body {
-        font-size: 16px;
-        height: 2000px;
-        background: linear-gradient(to left, #FF8008 , #FFC837);
-        color: #fff;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .demo {
-        margin: 10% auto;
-        width: 800px;
-        background: rgba(233, 156, 18, 0.4);
-        padding: 5%;
-    }
-    .demo h4 {
-        margin-bottom: 30px;
-    }
-    .demo .btn-change-position {
-        border: 0;
-        background-color: white;
-        color: #ff6347;
-        padding: 15px 25px;
-        margin-right: 15px;
-        border-radius: 2px;
-        margin-top: 20px;
-    }
-</style>
+<script type="text/javascript" src="./site/script.js"></script>
 </html>
