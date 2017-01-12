@@ -1,6 +1,6 @@
 {
   "name": "fork-me-baby",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A fancy github fork me button for side projects",
   "main": "index.js",
   "scripts": {
