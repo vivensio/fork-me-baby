@@ -43,6 +43,10 @@ $positions: top right bottom left;
     }
     .github-octicon-mark {
         fill: $octicon-fill-color;
+        @media (min-width: 321px) and (max-width: 767px) {
+            height: 24px;
+            width: 24px;
+        }
     }
     a {
         position: absolute;
@@ -58,12 +62,26 @@ $positions: top right bottom left;
         a {
             left: 20px;
         }
+        @media (min-width: 321px) and (max-width: 767px) {
+            @include make-triangle(0 0 60 75, left);
+            a {
+                left: 7px;
+                top: 7px;
+            }
+        }
     }
     &.top-right {
         @include make-triangle(0 125 100 0, right);
         @include zero-this(top right);
         a {
             right: 20px;
+        }
+        @media (min-width: 321px) and (max-width: 767px) {
+            @include make-triangle(0 75 60 0, right);
+            a {
+                top: 7px;
+                right: 7px;
+            }
         }
     }
     &.bottom-right {
@@ -73,6 +91,13 @@ $positions: top right bottom left;
             top: -45px;
 		    right: 20px;
         }
+        @media (min-width: 321px) and (max-width: 767px) {
+            @include make-triangle(0 0 60 75, bottom);
+            a {
+                top: -32px;
+                right: 7px;
+            }
+        }
     }
     &.bottom-left {
         @include make-triangle(0 125 100 0, bottom);
@@ -80,6 +105,13 @@ $positions: top right bottom left;
         a {
             top: -45px;
 		    left: 20px;
+        }
+        @media (min-width: 321px) and (max-width: 767px) {
+            @include make-triangle(0 75 60 0, bottom);
+            a {
+               top: -32px;
+                left: 7px; 
+            }
         }
     }
 }
