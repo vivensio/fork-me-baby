@@ -11,11 +11,16 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .demo {
-    margin: 10% auto;
-    width: 800px;
+    margin: 10vh 5vh;
     background: rgba(80, 18, 233, 0.5);
     padding: 5%;
-    box-shadow: 5px 5px 5px #2c2cca
+    box-shadow: 5px 5px 5px #2c2cca;
+}
+@media (min-width: 769px) {
+    .demo {
+        width: 800px;
+        margin: 10% auto;
+    }
 }
 .demo h4 {
     margin-bottom: 30px;
