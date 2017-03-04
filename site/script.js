@@ -35,7 +35,7 @@
     function repeat () {
         forkMeBaby({
             position : position,
-            link: 'https://www.vivensio.github.io/fork-me-baby',
+            link: 'https://patelvivek.com/fork-me-baby',
             sticky: sticky
         });
     }
